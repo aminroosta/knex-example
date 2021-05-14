@@ -3,6 +3,7 @@ const knex = require("knex")({
   connection: {
     filename: "./data.db",
   },
+  useNullAsDefault: true
 });
 
 // arelationship is usually implemented by having a foreign key
@@ -23,6 +24,7 @@ async function example_one_to_one() {
     });
 
   const insertedRows = await knex("users").insert({ name: "Tim" });
+  console.log(insertedRows);
   // ...and using the insert id, insert into the other table.
   await knex("accounts").insert({
     name: "knex",
@@ -44,4 +46,5 @@ async function example_one_to_one() {
   } catch (e) {
     console.error(e);
   }
+  process.exit(0)
 })();
