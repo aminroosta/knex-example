@@ -1,0 +1,11 @@
+{
+  "name": "knex-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "amin <amin.roosta@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "knex": "^0.95.5",
+    "node-ts": "^5.1.1"
+  }
+}
